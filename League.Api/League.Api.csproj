@@ -13,10 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\League.Common\League.Common.csproj" />
-    <ProjectReference Include="..\..\League.Service\League.Service.Interface\League.Service.Interface.csproj" />
-    <ProjectReference Include="..\..\League.Service\League.Service\League.Service.csproj" />
-    <ProjectReference Include="..\..\Model\League.Model\League.Model.csproj" />
+    <ProjectReference Include="..\Common\League.Common\League.Common.csproj" />
+    <ProjectReference Include="..\Model\League.Model\League.Model.csproj" />
+    <ProjectReference Include="..\Service\League.Service.Interface\League.Service.Interface.csproj" />
+    <ProjectReference Include="..\Service\League.Service\League.Service.csproj" />
   </ItemGroup>
 
 </Project>

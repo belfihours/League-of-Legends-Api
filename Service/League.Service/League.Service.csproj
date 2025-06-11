@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\League.Common\League.Common.csproj" />
+    <ProjectReference Include="..\..\Model\League.Model\League.Model.csproj" />
+    <ProjectReference Include="..\League.Service.Interface\League.Service.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
