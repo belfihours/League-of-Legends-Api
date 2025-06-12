@@ -11,7 +11,7 @@ public class ChampionsController : Controller
 {
 
     [HttpGet("get-all", Name = "GetAllChampions")]
-    public async Task<ActionResult<IEnumerable<ChampionDto>>> GetAll([FromServices] IChampionsService championsService)
+    public async Task<ActionResult<IEnumerable<ChampionDto>>> GetAll([FromServices] IRiotChampionsService championsService)
     {
         var champions = await championsService.GetAll();
         return Ok(champions);

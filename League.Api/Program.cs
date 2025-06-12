@@ -27,7 +27,7 @@ builder.Services.AddLogging(logging=>
 
 builder.Services.AddHttpClient();
 
-builder.Services.AddSingleton<IChampionsService, ChampionsService>();
+builder.Services.AddSingleton<IRiotChampionsService, RiotChampionsService>();
 
 
 

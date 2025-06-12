@@ -2,8 +2,7 @@
 
 namespace League.Service.Interface;
 
-public interface IChampionsService
+public interface IRiotChampionsService
 {
     Task<IEnumerable<ChampionDto>> GetAll();
-    Task<ChampionDto> GetById(string id);
 }

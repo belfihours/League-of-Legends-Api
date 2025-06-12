@@ -10,12 +10,12 @@ using System.Text.Json;
 
 namespace League.Service;
 
-public class ChampionsService : ApiServiceBase, IChampionsService
+public class RiotChampionsService : ApiServiceBase, IRiotChampionsService
 {
     private readonly ChampionsConfiguration _configuration;
     private readonly string _championsTestFileName = "..\\League.Api\\Response\\champions.json";
 
-    public ChampionsService(
+    public RiotChampionsService(
         ILogger<ApiServiceBase> logger,
         IHttpClientFactory httpClientFactory,
         IOptions<ApiConfiguration> options)
@@ -46,10 +46,5 @@ public class ChampionsService : ApiServiceBase, IChampionsService
         using StreamReader r = new StreamReader(_championsTestFileName);
         string json = r.ReadToEnd();
         return json;
-    }
-
-    public Task<ChampionDto> GetById(string id)
-    {
-        throw new NotImplementedException();
     }
 }
