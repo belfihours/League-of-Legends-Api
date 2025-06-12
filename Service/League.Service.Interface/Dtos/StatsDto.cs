@@ -3,7 +3,7 @@
 namespace League.Service.Dtos;
 
 [Serializable]
-public class StatDto
+public class StatsDto
 {
     [JsonPropertyName("hp")]
     public double Hp { get; set; }

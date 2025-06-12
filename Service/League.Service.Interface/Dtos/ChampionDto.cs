@@ -21,5 +21,5 @@ public class ChampionDto
     [JsonPropertyName("partype")]
     public string ParType { get; set; } = string.Empty;
     [JsonPropertyName("stats")]
-    public StatDto Stats { get; set; } = new();
+    public StatsDto Stats { get; set; } = new();
 }

@@ -27,13 +27,18 @@ public class ChampionsService : ApiServiceBase, IChampionsService
     public async Task<IEnumerable<ChampionDto>> GetAll()
     {
         var url = _configuration.GetAllChampionsUrl();
+        IEnumerable<ChampionDto> result;
 
-        //var response = GetObjectFromEndpoint<IEnumerable<Champion>>(url);
-        //var responseLocal = "\\""\\""
+        var response = await GetObjectFromEndpoint<ChampionResponseDto>(url);
+        if (response is not null)
+        {
+            result = response.Data.Values;
+            return result;
+        }
         var reposnseLocal = GetLocalChampsReponse();
-        var result = JsonSerializer.Deserialize<ChampionResponseDto>(reposnseLocal, LeagueJsonSerializerOptions.DefaultReadOptions);
-
-        return result!.Data.Select(data => data.Value);
+        var deserialized = JsonSerializer.Deserialize<ChampionResponseDto>(reposnseLocal, LeagueJsonSerializerOptions.DefaultReadOptions);
+        result = deserialized!.Data.Values;
+        return result;
     }
 
     private string GetLocalChampsReponse()
