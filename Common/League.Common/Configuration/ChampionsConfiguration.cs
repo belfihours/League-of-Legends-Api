@@ -3,7 +3,7 @@ namespace League.Common.Configuration;
 
 public class ChampionsConfiguration : IEndpointConfiguration
 {
-    private const string _allChampionsEndpoint = "AllChampions";
+    public static readonly string AllChampionsEndpoint = "AllChampions";
 
     public string BaseUrl { get; set; } = string.Empty;
     public string Version { get; set; } = string.Empty;
@@ -29,7 +29,7 @@ public class ChampionsConfiguration : IEndpointConfiguration
 
     private string GetAllChampionsEndpoint()
     {
-        return Requests.GetValueOrDefault(_allChampionsEndpoint)
-               ?? throw new KeyNotFoundException($"Endpoint '{_allChampionsEndpoint}' not found in Requests dictionary.");
+        return Requests.GetValueOrDefault(AllChampionsEndpoint)
+               ?? throw new KeyNotFoundException($"Endpoint '{AllChampionsEndpoint}' not found in Requests dictionary.");
     }
 }
