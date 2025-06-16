@@ -1,4 +1,5 @@
 # League of Legends Api
+WIP
 This project comes from the wil of just implement some coding pattern and methodology, but it is still growing in my mind and I don't know where it will lead to 🚀
 
 ## Features
